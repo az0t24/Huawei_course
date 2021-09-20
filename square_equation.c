@@ -24,6 +24,8 @@ int solve_square(const double a, const double b, const double c, double* x1, dou
  */ 
 void print_answer(const int num, const double x1, const double x2);
 
+void test();
+
 int main() {
 	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
 
@@ -33,6 +35,8 @@ int main() {
 	int numberOfRoots = solve_square(a, b, c, &x1, &x2);
 
 	print_answer(numberOfRoots, x1, x2);
+	
+	test();
 
 	return 0;
 }
@@ -94,7 +98,7 @@ void print_answer(const int num, const double x1, const double x2) {
 
 void test() {
 	double x1 = -1, x2 = -1;
-	int num;
+	int num = 5;
 
 	num = solve_square(1, 0, 0, &x1, &x2);
 	assert(num == 1);
