@@ -91,3 +91,31 @@ void print_answer(const int num, const double x1, const double x2) {
 		default: printf("Произошла ошибка\n");
 	}
 }
+
+void test() {
+	double x1 = -1, x2 = -1;
+	int num;
+
+	num = solve_square(1, 0, 0, &x1, &x2);
+	assert(num == 1);
+	assert(x1 == 0);
+	assert(x2 == -1);
+
+	num = solve_square(0, 1, 0, &x1, &x2);
+	assert(num == 1);
+	assert(x1 == 0);
+	assert(x2 == -1);
+
+	num = solve_square(0, 0, 1, &x1, &x2);
+	assert(num == 0);
+	assert(x1 == 0);
+	assert(x2 == -1);
+
+	num = solve_square(1, 3, 2, &x1, &x2);
+	assert(num == 2);
+	assert(x1 == -1);
+	assert(x2 == -2);
+
+	num = solve_square(0, 0, 0, &x1, &x2);
+	assert(num = INF_ROOTS);
+}
