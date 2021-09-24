@@ -5,6 +5,9 @@
 
 #define EPS 10e-9
 
+/**
+ * It defines error codes.
+ */ 
 enum SQ_EQ_ERRORS {
     sq_eq_ok,
     sq_eq_too_few_args,
@@ -15,6 +18,9 @@ enum SQ_EQ_ERRORS {
 };
 typedef enum SQ_EQ_ERRORS SQ_EQ_ERRORS;
 
+/**
+ * It defines the number of roots of square equation.
+ */
 enum SQ_EQ_ROOTS {
     sq_eq_no_root,
     sq_eq_one_root,
